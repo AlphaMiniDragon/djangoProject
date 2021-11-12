@@ -1,0 +1,158 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block navbar %}
+<!-- Header -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <div class="navbar-header" >
+            <a href="{% url 'home' %}" class="navbar-brand" style="font-family:'Dancing Script', cursive; font-size: 60px; color: rgb(219, 90, 39);">DelDish</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="{% url 'home' %}" class="nav-link bg-warning"><i class="fas fa-home" style="color: rgb(219, 90, 39);"></i> Main</a></li>
+                <li class="nav-item"><a href="{% url 'about' %}" class="nav-link bg-info"><i class="far fa-address-card" style="color: rgb(219, 90, 39);"></i> About Us</a></li>
+                <li class="nav-item active"><a href="{% url 'recipes' %}" class="nav-link" ><i class="fas fa-utensils" style="color: rgb(219, 90, 39);"></i> Recipes</a></li>
+                <li class="nav-item"><a href="{% url 'contacts' %}" class="nav-link bg-info" ><i class="fas fa-address-book" style="color: rgb(219, 90, 39);"></i> Contact Us</a></li>
+                <li class="nav-item"><a href="{% url 'login' %}" class="nav-link bg-warning"><i class="fas fa-bookmark" style="color: rgb(219, 90, 39);"></i> My Recipes Book</a></li>
+                <li class="nav-item"><a href="{% url 'login' %}" class="nav-link bg-info"><i class="fas fa-sign-in-alt" style="color: rgb(219, 90, 39);"></i> Login In</a></li>
+                <li class="nav-item"><i class="fa fa-search" aria-hidden="true" style="color: rgb(219, 90, 39); margin-top: 17px;"></i></li>
+                <input type="text" class="form-control" placeholder="Search" style="width: 20%; margin-top: 7px;">
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+ <!-- Content part -->
+ <div class="container" style="background-color: #fff; border-radius: 10px; margin-bottom: 20px;">
+    <div class="container-fluid">
+        <div class="row text-center alert" style="background-color: #fff;">
+            <div class="col-12">
+                <h1 class="display-4" style="font-family: 'Dancing Script', cursive;; font-size: 60px; color: rgb(219, 90, 39);">Delicious dishes</h1>
+            </div>
+            <hr>
+            <div class="col-12">
+                <p class="lead" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">A site with a recipe book based on three cuisines: Japanese, Italian and French. Here you can see some recipes with step-by-step instructions for cooking, as well as the ingredients you need for the recipe.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- First cuisine -->
+    <div class="container-fluid padding" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <div class="row text-center alert" style="background-image: url('{%static "main/img/flagJapan.jpg"%}'); object-fit: contain;">
+            <div class="col-12">
+                <h1 class="display-4" style="font-family: 'Brush Script MT', cursive; font-size: 60px; color: rgb(219, 90, 39);">Japanese Food</h1>
+            </div>
+        </div>
+        <div class="row text-center padding">
+            <a href="Tempura_Recipe.html">
+                <div class="card col-xs-12 col-sm-6 col-md-4" style="max-width: 350px; background-color: #ffc107;">
+                    <img src="{% static 'main/img/tempura.jpg' %}" class="card-img-top" alt="">
+                    <div class="card-body">
+                        {% for el in recipe %}
+                    <h3 class="card-title">{{el.rec_head}}</h3>
+                    <p class="card-text">{{el.rec_descrip}}</p>
+                        {% endfor %}
+                    <a href="Tempura_Recipe.html" class="btn bg-info">Go to recipe</a>
+                    </div>
+                </div>
+            </a>
+            <div class="card col-xs-12 col-sm-6 col-md-4" style="max-width: 350px; background-color: #ffc107;">
+                <img src="{% static 'main/img/teriyaki.jpg' %}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">TERIYAKI NOODLES with Vegetables</h3>
+                  <p class="card-text">A vegetable dish with noodles with a pleasant sweetish taste and slight sourness!</p>
+                  <a href="#" class="btn bg-info">Go to recipe</a>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-6 col-md-4" style="max-width: 350px; background-color: #ffc107;">
+                <img src="{% static 'main/img/cheeseBalls.jpg' %}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Rise Balls with Cheese</h3>
+                  <p class="card-text">Original, beautiful, crispy, made from simple products!</p>
+                  <a href="#" class="btn bg-info">Go to recipe</a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+    </div>
+
+    <!-- Second cuisine -->
+    <div class="container-fluid padding" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <div class="row text-center alert" style="background-image: url('{%static "main/img/flagItalian3.jpg"%}'); object-fit: contain;">
+            <div class="col-12">
+                <h1 class="display-4" style="font-family: 'Brush Script MT', cursive; font-size: 60px; color: rgb(219, 90, 39);">Italian Food</h1>
+            </div>
+        </div>
+        <div class="row text-center padding">
+            <div class="card col-xs-12 col-sm-6 col-md-4" style="max-width: 350px; background-color: #ffc107;">
+                <img src="{% static 'main/img/calzone.jpg' %}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Pizza CALZONE</h3>
+                  <p class="card-text">Italian "closed" pizza that retains aroma and juice inside itself.</p>
+                  <a href="#" class="btn bg-info">Go to recipe</a>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-6 col-md-4" style="max-width: 350px; background-color: #ffc107;">
+                <img src="{% static 'main/img/spaghetti.jpg' %}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Spaghetti with Mushrooms in Cream Sauce</h3>
+                  <p class="card-text">A very simple and tasty dish for lovers of Italian cuisine.</p>
+                  <a href="#" class="btn bg-info">Go to recipe</a>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-6 col-md-4" style="max-width: 350px; background-color: #ffc107;">
+                <img src="{% static 'main/img/carbonara.jpg' %}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">SPAGHETTI CARBONARA CLASSIC</h3>
+                  <p class="card-text">Very tasty and simple, in a hurry, for dinner for a family!</p>
+                  <a href="#" class="btn bg-info">Go to recipe</a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+    </div>
+
+    <!-- Third cuisine -->
+    <div class="container-fluid padding" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <div class="row text-center alert" style="background-image: url('{%static "main/img/flagFrench.png"%}'); object-fit: contain;">
+            <div class="col-12" >
+                <h1 class="display-4" style="font-family: 'Brush Script MT', cursive; font-size: 60px; color: rgb(219, 90, 39);">French Food</h1>
+            </div>
+        </div>
+        <div class="row text-center padding">
+            <div class="card col-xs-12 col-sm-6 col-md-4" style="max-width: 350px; background-color: #ffc107;">
+                <img src="{% static 'main/img/potato.jpg' %}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Potato with Meat in oven</h3>
+                  <p class="card-text">Delicious simple products for the whole family!</p>
+                  <a href="#" class="btn bg-info">Go to recipe</a>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-6 col-md-4" style="max-width: 350px; background-color: #ffc107;">
+                <img src="{% static 'main/img/fricase.jpg' %}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Classic Fricase</h3>
+                  <p class="card-text">Fricassee is a stew made from white chicken meat.</p>
+                  <a href="#" class="btn bg-info">Go to recipe</a>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-6 col-md-4" style="max-width: 350px; background-color: #ffc107;">
+                <img src="{% static 'main/img/criossants.jpg' %}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Criossants with Chocolate soft Leaflet passion</h3>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn bg-info">Go to recipe</a>
+                </div>
+            </div>
+        <hr class="my-4">
+    </div>
+</div>
+</div>
+{% endblock %}
+

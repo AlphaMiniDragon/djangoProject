@@ -1,0 +1,79 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block navbar %}
+<!-- Header -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <div class="navbar-header" >
+            <a href="{% url 'home' %}" class="navbar-brand" style="font-family:'Dancing Script', cursive; font-size: 60px; color: rgb(219, 90, 39);">DelDish</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="{% url 'home' %}" class="nav-link"><i class="fas fa-home" style="color: rgb(219, 90, 39);"></i> Main</a></li>
+                <li class="nav-item"><a href="{% url 'about' %}" class="nav-link bg-info"><i class="far fa-address-card" style="color: rgb(219, 90, 39);"></i> About Us</a></li>
+                <li class="nav-item"><a href="{% url 'recipes' %}" class="nav-link bg-warning" ><i class="fas fa-utensils" style="color: rgb(219, 90, 39);"></i> Recipes</a></li>
+                <li class="nav-item"><a href="{% url 'contacts' %}" class="nav-link bg-info" ><i class="fas fa-address-book" style="color: rgb(219, 90, 39);"></i> Contact Us</a></li>
+                <li class="nav-item"><a href="{% url 'login' %}" class="nav-link bg-warning"><i class="fas fa-bookmark" style="color: rgb(219, 90, 39);"></i> My Recipes Book</a></li>
+                <li class="nav-item"><a href="{% url 'login' %}" class="nav-link bg-info"><i class="fas fa-sign-in-alt" style="color: rgb(219, 90, 39);"></i> Login In</a></li>
+                <li class="nav-item"><i class="fa fa-search" aria-hidden="true" style="color: rgb(219, 90, 39); margin-top: 17px;"></i></li>
+                <input type="text" class="form-control" placeholder="Search" style="width: 20%; margin-top: 7px;">
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+
+<!-- Slider -->
+<div class="carousel slide" data-ride="carousel" id="slides">
+    <ul class="carousel-indicators">
+        <li class="active" data-target="#slides" data-slide-to="0"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'main/img/sushiWP.png' %}" alt="img_error">
+            <div class="carousel-caption" style="text-shadow: 1px 1px 10px #000; ">
+                <h1 class="display-2">Japanese Food</h1>
+                <h3>Learn to Cook</h3>
+                <a href="Recipes.html"><button type="button" class="btn btn-outline-light btn-lg" style="text-shadow: 1px 1px 10px #000;">Learn More</button></a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'main/img/ItalianWP2.jpg' %}" alt="img_error">
+            <div class="carousel-caption" style="text-shadow: 1px 1px 10px #000;">
+                <h1 class="display-2">Italian Food</h1>
+                <h3>Learn to Cook</h3>
+                <a href="Recipes.html"><button type="button" class="btn btn-outline-light btn-lg" style="text-shadow: 1px 1px 10px #000;">Learn More</button></a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'main/img/FrenchWP2.jpg' %}" alt="img_error">
+            <div class="carousel-caption" style="text-shadow: 1px 1px 10px #000;">
+                <h1 class="display-2">French Food</h1>
+                <h3>Learn to Cook</h3>
+                <a href="Recipes.html"><button type="button" class="btn btn-outline-light btn-lg" style="text-shadow: 1px 1px 10px #000;">Learn More</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main text -->
+<div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead">Here you can not only get acquainted with the dishes, but also learn their recipe and cook deliciously, quickly, and most importantly - on your own!</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <a href="Recipes.html"><button class="btn btn-success btn-lg" type="button">Learn More</button></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

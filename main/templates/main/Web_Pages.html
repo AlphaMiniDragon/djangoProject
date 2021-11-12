@@ -1,0 +1,138 @@
+<!Doctype HTML>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DelDish</title>
+
+  <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Font-awesome icons -->
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/0bd1e8befe.js" crossorigin="anonymous"></script>
+
+   
+
+</head>
+
+
+<body>
+	
+	<div id="mySidenav" class="sidenav">
+	<p class="logo"><span>D</span>elDish</p>
+  <a href="index.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+  <a href="Web_Pages.html"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Web Pages</a>
+  <a href="Accounts.html"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
+  <a href="Recipes.html"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Recipes</a>
+
+</div>
+<div id="main">
+	<div class="head">
+		<div class="col-div-6">
+<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >&#9776; Dashboard</span>
+<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >&#9776; Dashboard</span>
+</div>
+	
+	<div class="col-div-6">
+	<div class="profile">
+
+		<img src="images/miniDragon.jpg" class="pro-img" style="border-radius: 50%;" />
+		<p>Admin <span>Fullstack developer</span></p>
+	</div>
+</div>
+	<div class="clearfix"></div>
+</div>
+
+	<div class="clearfix"></div>
+	<br/>
+	
+	<div class="clearfix"></div>
+	<br/><br/>
+	<div class="col-div-8">
+		<div class="box-8" style="height: 400px;">
+		<div class="content-box">
+			<table>
+  <tr style="font-size: 20px;">
+    <th>Web Pages</th>
+    <th>File names</th>
+  </tr>
+  <tr>
+    <td>Deldish Main page</td>
+    <td><a href="Main.html">Main.html</a></td>
+  </tr>
+  <tr>
+    <td>About us page</td>
+    <td><a href="About_us.html">About_us.html</a></td>
+  </tr>
+  <tr>
+    <td>Recipes page</td>
+    <td><a href="Recipes.html">Recipes.html</a></td>
+  </tr>
+  <tr>
+    <td>Contact us page</td>
+    <td><a href="Contacts.html">Contacts.html</a></td>
+  </tr>
+  <tr>
+    <td>Login page</td>
+    <td><a href="Log_in.html">Log_in.html</a></td>
+  </tr>
+  <tr>
+    <td>Registration page</td>
+    <td><a href="Sign_up.html">Sign_up.html</a></td>
+  </tr>
+  
+  
+</table>
+		</div>
+	</div>
+	</div>
+		
+	<div class="clearfix"></div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+  $(".nav").click(function(){
+    $("#mySidenav").css('width','70px');
+    $("#main").css('margin-left','70px');
+    $(".logo").css('visibility', 'hidden');
+    $(".logo span").css('visibility', 'visible');
+     $(".logo span").css('margin-left', '-10px');
+     $(".icon-a").css('visibility', 'hidden');
+     $(".icons").css('visibility', 'visible');
+     $(".icons").css('margin-left', '-8px');
+      $(".nav").css('display','none');
+      $(".nav2").css('display','block');
+  });
+
+$(".nav2").click(function(){
+    $("#mySidenav").css('width','300px');
+    $("#main").css('margin-left','300px');
+    $(".logo").css('visibility', 'visible');
+     $(".icon-a").css('visibility', 'visible');
+     $(".icons").css('visibility', 'visible');
+     $(".nav").css('display','block');
+      $(".nav2").css('display','none');
+ });
+
+</script>
+
+<script type="text/javascript" src="loadPage.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DelDish</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Connect to CSS file -->
+    <link rel="stylesheet" href="css/recipe_style.css">
+
+    <!-- Font-awesome icons -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0bd1e8befe.js" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-image: url(images/themeReverse.jpg);">
+    
+    <!-- Header -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <div class="navbar-header" >
+                <a href="Main.html" class="navbar-brand" style="font-family:'Dancing Script', cursive; font-size: 60px; color: rgb(219, 90, 39);">DelDish</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="Main.html" class="nav-link"><i class="fas fa-home" style="color: rgb(219, 90, 39);"></i> Main</a></li>
+                    <li class="nav-item"><a href="About_us.html" class="nav-link bg-info"><i class="far fa-address-card" style="color: rgb(219, 90, 39);"></i> About Us</a></li>
+                    <li class="nav-item"><a href="Recipes.html" class="nav-link bg-warning" ><i class="fas fa-utensils" style="color: rgb(219, 90, 39);"></i> Recipes</a></li>
+                    <li class="nav-item"><a href="Contacts.html" class="nav-link bg-info" ><i class="fas fa-address-book" style="color: rgb(219, 90, 39);"></i> Contact Us</a></li>
+                    <li class="nav-item"><a href="Log_in.html" class="nav-link bg-warning"><i class="fas fa-bookmark" style="color: rgb(219, 90, 39);"></i> My Recipes Book</a></li>
+                    <li class="nav-item"><a href="Log_in.html" class="nav-link bg-info"><i class="fas fa-sign-in-alt" style="color: rgb(219, 90, 39);"></i> Login In</a></li>
+                    <li class="nav-item"><i class="fa fa-search" aria-hidden="true" style="color: rgb(219, 90, 39); margin-top: 17px;"></i></li>
+                    <input type="text" class="form-control" placeholder="Search" style="width: 20%; margin-top: 7px;">
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Accounts flexible menu -->
+    <div class="container">
+        <div class="well col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+               <div class="row user-row">
+                   <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1">
+                       <img class="img-circle"
+                            src="images/miniDragon.jpg"
+                            alt="User Pic">
+                   </div>
+                   <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+                       <strong>MiniDragon</strong><br>
+                       <span class="text-muted">User level: Administrator</span>
+                   </div>
+                   <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".cyruxx">
+                       <i class="glyphicon glyphicon-chevron-down text-muted"></i>
+                   </div>
+               </div>
+               <div class="row user-infos cyruxx">
+                   <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+                       <div class="panel panel-primary">
+                           <div class="panel-heading">
+                               <h3 class="panel-title">User information</h3>
+                           </div>
+                           <div class="panel-body">
+                               <div class="row">
+                                   <div class="col-md-3 col-lg-3 hidden-xs hidden-sm">
+                                       <img class="img-circle"
+                                        src="images/miniDragon.jpg"
+                                        alt="User Pic">
+                                   </div>
+                                   <div class="col-xs-2 col-sm-2 hidden-md hidden-lg">
+                                       <img class="img-circle"
+                                        src="images/miniDragon.jpg"
+                                        alt="User Pic">
+                                   </div>
+                                   <div class="col-xs-10 col-sm-10 hidden-md hidden-lg">
+                                       <strong>Cyruxx</strong><br>
+                                       <dl>
+                                           <dt>User level:</dt>
+                                           <dd>Administrator</dd>
+                                           <dt>Registered since:</dt>
+                                           <dd>01/01/2021</dd>
+                                           <dt>Topics</dt>
+                                           <dd>8</dd>
+                                           <dt>Warnings</dt>
+                                           <dd>0</dd>
+                                       </dl>
+                                   </div>
+                                   <div class=" col-md-9 col-lg-9 hidden-xs hidden-sm">
+                                       <strong>MiniDragon</strong><br>
+                                       <table class="table table-user-information">
+                                           <tbody>
+                                           <tr>
+                                               <td>User level:</td>
+                                               <td>Administrator</td>
+                                           </tr>
+                                           <tr>
+                                               <td>Registered since:</td>
+                                               <td>01/01/2021</td>
+                                           </tr>
+                                           <tr>
+                                               <td>Topics</td>
+                                               <td>8</td>
+                                           </tr>
+                                           <tr>
+                                               <td>Warnings</td>
+                                               <td>0</td>
+                                           </tr>
+                                           </tbody>
+                                       </table>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="panel-footer">
+                               <button class="btn btn-sm btn-primary" type="button"
+                                       data-toggle="tooltip"
+                                       data-original-title="Send message to user"><i class="glyphicon glyphicon-envelope"></i></button>
+                               <span class="pull-right">
+                                   <button class="btn btn-sm btn-warning" type="button"
+                                           data-toggle="tooltip"
+                                           data-original-title="Edit this user"><i class="glyphicon glyphicon-edit"></i></button>
+                                   <button class="btn btn-sm btn-danger" type="button"
+                                           data-toggle="tooltip"
+                                           data-original-title="Remove this user"><i class="glyphicon glyphicon-remove"></i></button>
+                               </span>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid">
+        <div class="container-fluid">
+            <div class="row padding text-center">
+                <div class="col-12">
+                    <h2>Social Media</h2>
+                </div>
+                <div class="col-12 social padding">
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2021 Copyright:
+                <a class="text-white" href="#">IITU.kz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="loadPage.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+    var panels = $('.user-infos');
+    var panelsButton = $('.dropdown-user');
+    panels.hide();
+
+    //Click dropdown
+    panelsButton.click(function() {
+        //get data-for attribute
+        var dataFor = $(this).attr('data-for');
+        var idFor = $(dataFor);
+
+        //current button
+        var currentButton = $(this);
+        idFor.slideToggle(400, function() {
+            //Completed slidetoggle
+            if(idFor.is(':visible'))
+            {
+                currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
+            }
+            else
+            {
+                currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+            }
+        })
+    });
+
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('button').click(function(e) {
+        e.preventDefault();
+        alert("This is a demo.\n :-)");
+    });
+});
+    </script>
+
+</body>
+</html>
